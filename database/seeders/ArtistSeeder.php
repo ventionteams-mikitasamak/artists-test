@@ -2,15 +2,16 @@
 
 namespace Database\Seeders;
 
+use App\Models\Artist;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class ArtistSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      */
     public function run(): void
     {
-        $this->call(ArtistSeeder::class);
+        Artist::factory(100)->create();
     }
 }
